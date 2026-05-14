@@ -1,7 +1,9 @@
-﻿#include <cstring>
+﻿#include "ballistics.hpp"
+
+#include <cstring>
 #include <iostream>
 #include <fstream>
-#include "ballistics.hpp"
+#include <math.h>
 
 #define DebugPrint
 
