@@ -1,7 +1,9 @@
-﻿#include <cstring>
+﻿#include "ballistics.hpp"
+
+#include <cstring>
 #include <iostream>
 #include <fstream>
-#include "ballistics.hpp"
+#include <math.h>
 
 #define DebugPrint
 
@@ -99,6 +101,7 @@ int main() {
 		return 1;
 	}
 
+#ifdef DebugPrint
 
 	std::cout << "==========================={{{" << std::endl;
 
@@ -108,14 +111,20 @@ int main() {
 	std::cout << "ammo_d: " << ammo_d << std::endl;
 	std::cout << "ammo_l: " << ammo_l << std::endl;
 
+#endif //DebugPrint
+
 	float ammo_fligthTime;
 	float h;
 	computeAmmoDrop(ammo_fligthTime, h, attackSpeed, zd, ammo_m, ammo_d, ammo_l);
+
+#ifdef DebugPrint
 
 	std::cout << "ammo_fligthTime: " << ammo_fligthTime << std::endl;
 	std::cout << "h: " << h << std::endl;
 
 	std::cout << "===========================}}}" << std::endl;
+
+#endif //DebugPrint
 
 	//--- Drop point ---
 
